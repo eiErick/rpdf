@@ -1,0 +1,172 @@
+:root {
+    --blue: #3584e4;
+    --blue-hover: #3584e4cc;
+    --dark-gray: #1e1e1e;
+    --gray: #303030;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100vh;
+}
+
+#hidden-header {
+    transition: .3s;
+    position: absolute;
+    top: .4rem;
+    left: .4rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: .4rem 0 .4rem 0;
+    background-color: var(--dark-gray);
+    box-shadow: 1px 1px 10px black;
+}
+
+#label-file-input {
+    position: absolute;
+    top: .4rem;
+    left: 3rem;
+    border: 2px solid var(--blue);
+    border-radius: 5px;
+    background-color: #fff;
+    color: var(--blue);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 6px 20px;
+}
+
+#file-input {
+    display: none;
+}
+
+#zoom-controls {
+    position: absolute;
+    top: .4rem;
+    right: .4rem;
+}
+
+#zoom-controls button {
+    padding: 5px 15px;
+    margin: 0 .5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--blue);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#zoom-controls button:hover {
+    background-color: var(--blue-hover);
+}
+
+#zoom-display {
+    color: white;
+}
+
+#pdf-controls {
+    display: flex;
+    align-items: center;
+}
+
+#pdf-controls button {
+    padding: 5px 15px;
+    margin: 0 .5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--blue);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#pdf-controls button:hover {
+    background-color: var(--blue-hover);
+}
+
+#pdf-controls span {
+    font-size: 18px;
+    color: #333;
+    color: white;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    height: 90%;
+    width: 100%;
+}
+
+#alert-msg {
+    display: none;
+    position: absolute;
+    color: white;
+    font-size: 22px;
+    background-color: #1e1e1eaa;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    transform: translate(-50%, -50%);
+    bottom: 8%;
+    left: 50%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+@media screen and (max-width: 550px) {
+    #label-file-input {
+        padding: 6px 5px;
+        font-size: 14px;
+        left: 2.6rem;
+    }
+
+    #hidden-header {
+        transition: .3s;
+        position: absolute;
+        top: .4rem;
+        left: .4rem;
+        border-radius: 5px;
+        cursor: pointer;
+        height: 30px;
+    }
+
+    #zoom-controls button {
+        padding: 5px 10px;
+        margin: 0 .2rem;
+        font-size: 16px;
+    }
+
+    #zoom-display {
+        font-size: 14px;
+    }
+
+    #pdf-controls button {
+        padding: 5px 10px;
+        margin: 0 .3rem;
+        font-size: 16px;
+    }
+
+    #pdf-controls span {
+        font-size: 14px;
+        color: #333;
+        color: white;
+    }
+}

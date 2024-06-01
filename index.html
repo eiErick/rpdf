@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="build/icons/256x256.png" type="image/x-icon">
+    <title>Reader PDF</title>
+</head>
+<body>
+    <img src="img/down.svg" alt="down" id="hidden-header">
+    <header id="header">
+        <label id="label-file-input" for="file-input">Browser PDF</label>
+        <input type="file" id="file-input" accept="application/pdf">
+        <div id="pdf-controls">
+            <button id="prev-page"><</button>
+            <span><span id="page-num"></span> / <span id="page-count"></span></span>
+            <button id="next-page">></button>
+        </div>
+        <div id="zoom-controls">
+            <button id="zoom-out">-</button>
+            <span id="zoom-display">90%</span>
+            <button id="zoom-in">+</button>
+        </div>
+    </header>
+    <main id="main">
+        <canvas id="pdf-canvas"></canvas>
+    </main>
+    <div id="alert-msg"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
